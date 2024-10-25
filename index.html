@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./libs/custom-select/custom-select.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,9 +59,60 @@
                     Discover on 3D Globe
                 </button>
             </div>
-            <form action="" class="header__form">form</form>
+
+            <form action="" class="header__form form">
+                <div class="form__input form__input--location">
+                    <label for="location" class="label">Location</label><br>
+                    <select class="select" name="" id="location">
+                        <option value="all">Explore nearby destinations</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+
+                <div class="form__input form__input--activity">
+                    <label for="activity" class="label">Activity</label><br>
+                    <select class="select" name="" id="activity">
+                        <option value="all">All Activities</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+
+                <div class="form__input form__input--when">
+                    <label for="when" class="label">When</label><br>
+                    <select class="select" name="" id="when">
+                        <option value="all">Choose a Date</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+
+                <div class="form__input form__input--guest">
+                    <label for="guest" class="label">Guests</label><br>
+                    <select class="select" name="" id="guest">
+                        <option value="all">1 guest</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+
+                <button class="button-search">
+                    <img src="img/icons/icon-search.svg" alt="">
+                </button>
+            </form>
         </div>
     </header>
 
+    <script src="./libs/custom-select/custom-select.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
