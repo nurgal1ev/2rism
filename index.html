@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>2rism</title>
+    <script src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.1/dist/index.umd.min.js"></script>
 </head>
 <body>
     <header class="header">
@@ -63,7 +64,7 @@
 
             <form action="" class="form">
                 <div class="form__input-wrapper form__input--location">
-                    <label for="location" class="form__label">Location</label>
+                    <label for="autoComplete" class="form__label">Location</label>
                     <input autocomplete="off" placeholder="Explore nearby destinations" type="text" class="form__input" id="autoComplete">
                 </div>
 
@@ -78,8 +79,8 @@
                 </div>
 
                 <div class="form__input-wrapper form__input--date">
-                    <label for="date" class="form__label">When</label>
-                    <input placeholder="Choose a date" type="date" class="form__input" id="when">
+                    <label for="datepicker" class="form__label">When</label>
+                    <input placeholder="Choose a date" type="text" class="form__input" id="datepicker">
                 </div>
 
                 <div class="form__input-wrapper form__input--guests">
@@ -99,9 +100,143 @@
         </div>
     </header>
 
+    <main class="main">
+        <!-- popular -->
+        <section class="section">
+            <div class="container">
+                <div class="section__header">
+                   <h2 class="title-1">Popular Destinations</h2>
+                </div>
+                <div class="section__cards section__cards--popular">
+                    <div class="card">
+                        <a class="card__link" href="#"></a>
+                        <img class="card__img" src="img/popular/bigsur.jpg" alt="img">
+                        <h3 class="card__title">Big Sur</h3>
+                        <a href="#california" class="card__location">California, USA</a>
+                    </div>
+
+                    <div class="card">
+                        <a class="card__link" href="#"></a>
+                        <img class="card__img" src="img/popular/prescott.jpg" alt="img">
+                        <h3 class="card__title">Prescott</h3>
+                        <a href="#california" class="card__location">Arizona, USA</a>
+                    </div>
+
+                    <div class="card">
+                        <a class="card__link" href="#"></a>
+                        <img class="card__img" src="img/popular/fortmayers.jpg" alt="img">
+                        <h3 class="card__title">Fort Mayers</h3>
+                        <a href="#california" class="card__location">Florida, USA</a>
+                    </div>
+
+                    <div class="card">
+                        <a class="card__link" href="#"></a>
+                        <img class="card__img" src="img/popular/tucson.jpg" alt="img">
+                        <h3 class="card__title">Tucson</h3>
+                        <a href="#california" class="card__location">Arizona, USA</a>
+                    </div>
+
+                    <div class="card">
+                        <a class="card__link" href="#"></a>
+                        <img class="card__img" src="img/popular/stjoseph.jpg" alt="img">
+                        <h3 class="card__title">St. Joseph</h3>
+                        <a href="#california" class="card__location">Michigan, USA</a>
+                    </div>
+
+                    <div class="card">
+                        <a class="card__link" href="#"></a>
+                        <img class="card__img" src="img/popular/madrid.jpg" alt="img">
+                        <h3 class="card__title">Madrid</h3>
+                        <a href="#california" class="card__location">Spain</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- hotels -->
+        <section class="section">
+            <div class="container">
+                <div class="section__header">
+                   <h2 class="title-1">Hotels and Restaurants</h2>
+                   <a href="" class="button-more">
+                    View all
+                    <img src="img/icons/arrow-more.svg" alt="">
+                </a>
+                </div>
+                <div class="section__cards section__cards--hotels">
+                    <div class="card">
+                        <a class="card__link" href="#"></a>
+                        <img class="card__img card__img--hotel" src="img/hotels/monastero.jpg" alt="img">
+                        <h3 class="card__title card__title--hotel">Monastero Santa Rosa Hotel & Spa</h3>
+                        <footer class="card__footer">
+                            <a href="#salerno" class="card__location card__location--icon">Salerno, Italy</a>
+                            <div class="card__rating">
+                                <img src="img/icons/star.svg" alt="">
+                                <img src="img/icons/star.svg" alt="">
+                                <img src="img/icons/star.svg" alt="">
+                                <img src="img/icons/star.svg" alt="">
+                                <img src="img/icons/star.svg" alt="">
+                            </div>
+                        </footer>
+                    </div>
+
+                    <div class="card">
+                        <a class="card__link" href="#"></a>
+                        <img class="card__img card__img--hotel" src="img/hotels/grand.jpg" alt="img">
+                        <h3 class="card__title card__title--hotel">Grand Hotel Tremezzo</h3>
+                        <footer class="card__footer">
+                            <a href="#salerno" class="card__location card__location--icon">Lake Como, Italy</a>
+                            <div class="card__rating">
+                                <img src="img/icons/star.svg" alt="">
+                                <img src="img/icons/star.svg" alt="">
+                                <img src="img/icons/star.svg" alt="">
+                                <img src="img/icons/star.svg" alt="">
+                                <img src="img/icons/star.svg" alt="">
+                            </div>
+                        </footer>
+                    </div>
+
+                    <div class="card">
+                        <a class="card__link" href="#"></a>
+                        <img class="card__img card__img--hotel" src="img/hotels/oberoi.jpg" alt="img">
+                        <h3 class="card__title card__title--hotel">The Oberoi Udaivilas, Udaipur</h3>
+                        <footer class="card__footer">
+                            <a href="#salerno" class="card__location card__location--icon">Udaipur, India</a>
+                            <div class="card__rating">
+                                <img src="img/icons/star.svg" alt="">
+                                <img src="img/icons/star.svg" alt="">
+                                <img src="img/icons/star.svg" alt="">
+                                <img src="img/icons/star.svg" alt="">
+                                <img src="img/icons/star.svg" alt="">
+                            </div>
+                        </footer>
+                    </div>
+
+                    <div class="card">
+                        <a class="card__link" href="#"></a>
+                        <img class="card__img card__img--hotel" src="img/hotels/beverly.jpg" alt="img">
+                        <h3 class="card__title card__title--hotel">AKA Beverly Hills</h3>
+                        <footer class="card__footer">
+                            <a href="#salerno" class="card__location card__location--icon">Los Angeles, United States</a>
+                            <div class="card__rating">
+                                <img src="img/icons/star.svg" alt="">
+                                <img src="img/icons/star.svg" alt="">
+                                <img src="img/icons/star.svg" alt="">
+                                <img src="img/icons/star.svg" alt="">
+                                <img src="img/icons/star.svg" alt="">
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
     <script src="./libs/autoComplete.js-10.2.9/dist/autoComplete.min.js"></script>
     <script src="./libs/custom-select/custom-select.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/input-dest.js"></script>
+    <script src="./js/calendar.js"></script>
 </body>
 </html>
