@@ -236,6 +236,14 @@ input[type="text"]::placeholder {
     grid-template-columns: repeat(4, 1fr);
 }
 
+.section__cards--activities {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.section__cards--travel {
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .title-1 {
     font-weight: 600;
     font-size: 32px;
@@ -245,6 +253,12 @@ input[type="text"]::placeholder {
 
 .card {
     position: relative;
+}
+
+.card--wide {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
 }
 
 .card__link {
@@ -260,7 +274,15 @@ input[type="text"]::placeholder {
     margin-bottom: 8px;
 }
 
+.card__img--no-margin {
+    margin: 0;
+}
+
 .card__img--hotel {
+    margin-bottom: 10px;
+}
+
+.card__img--activities {
     margin-bottom: 10px;
 }
 
@@ -271,6 +293,10 @@ input[type="text"]::placeholder {
 }
 
 .card__title--hotel {
+    margin-bottom: 12px;
+}
+
+.card__title--activities {
     margin-bottom: 12px;
 }
 
@@ -322,4 +348,92 @@ input[type="text"]::placeholder {
     display: flex;
     align-items: center;
     gap: 2px;
+}
+
+.card__desc {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card__title--big {
+    color: #161414;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.card__text {
+    font-size: 16px;
+    color: #5b5b5b;
+    line-height: 2;
+}
+
+.card__footer--wide {
+    margin-top: auto;
+}
+
+.card__footer-link {
+    font-size: 12px;
+    color: #878787;
+    position: relative;
+    z-index: 1;
+}
+
+.card__footer-link:hover {
+    color: #7B61FF;;
+}
+
+.card__footer-link--date {
+    padding-left: 20px;
+    background: url('./../img/icons/date-grey.svg');
+    background-repeat: no-repeat;
+    background-position: 0px 2px;
+}
+
+.card__footer-link--author {
+    padding-left: 20px;
+    background: url('./../img/icons/user.svg');
+    background-repeat: no-repeat;
+    background-position: 0px 2px;
+}
+
+.card__footer-link--comments {
+    padding-left: 20px;
+    background: url('./../img/icons/comm.svg');
+    background-repeat: no-repeat;
+    background-position: 0px 2px;
+}
+
+.about-us {
+    margin: 0 auto;
+    max-width: 1144px;
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.about-us__desc {
+    display: grid;
+    gap: 32px;
+    align-content: center;
+}
+
+.about-us__title {
+    color: #161414;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.about-us__text {
+    font-size: 16px;
+    color: #5b5b5b;
+    line-height: 2;
+}
+
+.about-us__btn{
+    justify-self: flex-start;
+}
+
+.about-us__img {
+    border-radius: 24px;
 }
