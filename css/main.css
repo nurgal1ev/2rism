@@ -499,28 +499,49 @@ input[type="text"]::placeholder {
 }
 
 /* input */
-.footer__subsribe {
-
+.footer__subscribe {
+    min-width: 388px;
 }
 
-.footer__subsribe-title {
+.footer__subscribe-title {
     font-size: 18px;
     font-weight: 500;
     color: #161414;
     margin-bottom: 20px;
 }
 
-.subsribe {
-    display: grid;
-    grid-template-columns: auto auto;
+.subscribe {
+    display: flex;
+    gap: 16px;
+    align-items: center;
 }
 
-.subsribe__input-wrapper {
-
+.subscribe__input-wrapper {
+    position: relative;
 }
 
-.subsribe__btn-wrapper {
+.subscribe__input {
+    padding: 32px 20px 16px 56px;
+    width: 300px;
+    height: 72px;
+    background-color: #fff;
+    border-radius: 12px;
 
+    background-image: url('./../img/icons/mail.svg');
+    background-repeat: no-repeat;
+    background-position: 18px 27px;
+}
+
+.subscribe__label {
+    position: absolute;
+    top: 26px;
+    left: 56px;
+
+    font-size: 14px;
+    font-weight: 300;
+    color: #5b5b5b;
+    transition: all 0.1s ease-in;
+    pointer-events: none;
 }
 
 .button--subscribe {
@@ -528,3 +549,17 @@ input[type="text"]::placeholder {
     height: 72px;
     padding: 28px;
 }
+
+.subscribe__input:focus ~ .subscribe__label,
+.subscribe__input:valid ~ .subscribe__label {
+    top: 16px;
+}
+
+.subscribe__label--top {
+    top: 16px;
+}
+
+/* .subscribe__input:user-invalid ~ .subscribe__label {
+    top: 16px;
+    color: #FF0000;
+} */
